@@ -13,16 +13,19 @@ app.get("/", (request,response) => {
     </html>
     `
   )
-})
+});
 
 app.get("/greeting", (req,res) => {
   res.send("Hola, Amigos!");
-})
+});
 
 app.get("/greeting/:name", (req,res) => {
   res.send(`Hola, ${req.params.name}!`)
-})
+});
 
+app.get("/tip/:total/:tipPercentage", (req,res) => {
+  res.send(`${parseInt(req.params.total) * parseInt(req.params.tipPercentage) / 100}`);
+})
 
 app.listen(PORT, () => {
   console.log(`I am listening Port: ${PORT}...`);
