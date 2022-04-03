@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req,res) => {
-  res.send("No Bottles of Crémas On the Wall.");
+  res.send("Find Bottles Or Bugs");
 })
 
 app.get("/:num_of_bottles", (req,res) => {
