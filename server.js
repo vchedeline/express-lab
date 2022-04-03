@@ -15,6 +15,14 @@ app.get("/", (request,response) => {
   )
 })
 
+app.get("/greeting", (req,res) => {
+  res.send("Hola, Amigos!");
+})
+
+app.get("/greeting/:name", (req,res) => {
+  res.send(`Hola, ${req.params.name}!`)
+})
+
 
 app.listen(PORT, () => {
   console.log(`I am listening Port: ${PORT}...`);
